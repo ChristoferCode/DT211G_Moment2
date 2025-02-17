@@ -521,18 +521,75 @@ p {
     background-color: rgb(64, 255, 191);
 }  
 
+.ramschema {
+    margin-bottom: 50px;
+    font-size: 3.4rem;
+
+}
+
+.search {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+}
+
+#search {
+    margin-bottom: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding: 5px;
+    
+}
+
+#sort1 {
+    width: 25%;
+}
+
+#sort2 {
+    width: 35%;
+}
+
+#sort3 {
+    width: 30%;
+}
+
+#sort1:hover {
+    background-color: rgb(164, 255, 225);
+    box-shadow: rgb(255, 255, 255) 0px 2px 8px;
+    cursor: pointer;
+    color: rgb(0, 91, 61);
+    text-shadow: rgb(255, 255, 255) 0px 2px 8px;
+}
+
+#sort2:hover {
+    background-color: rgb(164, 255, 225);
+    box-shadow: rgb(255, 255, 255) 0px 2px 8px;
+    cursor: pointer;
+    color: rgb(0, 91, 61);
+    text-shadow: rgb(255, 255, 255) 0px 2px 8px;
+}
+
+#sort3:hover {
+    background-color: rgb(164, 255, 225);
+    box-shadow: rgb(255, 255, 255) 0px 2px 8px;
+    cursor: pointer;
+    color: rgb(0, 91, 61);
+    text-shadow: rgb(255, 255, 255) 0px 2px 8px;
+}
+
 table {
     border: 10px solid rgb(64, 255, 191);
     margin: 0 auto;
     margin-bottom: 100px;
-    width: 500px;
+    max-width: 700px;
     border-collapse: collapse;
     box-shadow: rgb(0, 0, 0) 0px 2px 8px;}
 
 thead {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.4rem;
-    line-height: 3.6rem;
+    font-size: 2.0rem;
+    line-height: 3.0rem;
     text-align: left;
     padding: 10px;
     background-color: rgb(64, 255, 191);
@@ -542,7 +599,6 @@ thead {
 th {
     border-bottom: 2px solid black;
     padding: 10px;
-
 }
 
 tbody {
@@ -568,7 +624,7 @@ tr:nth-child(even) {
 
 }
 
-tr:hover {
+tbody > tr:hover {
     background-color: rgb(164, 255, 225);
     box-shadow: rgb(255, 255, 255) 0px 2px 8px;
     cursor: pointer;
