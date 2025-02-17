@@ -60,45 +60,45 @@ function filterCourses() {
 
     tbodyEl.innerHTML = "";
 
-    filteredToTable(filteredCourses);
+    dataToTable(filteredCourses);
 }
 
-function filteredToTable(data) {
-    tbodyEl.innerHTML = "";
+// function filteredToTable(data) {
+//     tbodyEl.innerHTML = "";
 
-    data.forEach(course => {
-        tbodyEl.innerHTML += `<tr><td>${course.code}</td><td>${course.coursename}</td><td>${course.progression}</td></tr>`;
-    });
-    console.log("Här fortsätter mitt program3...");
+//     data.forEach(course => {
+//         tbodyEl.innerHTML += `<tr><td>${course.code}</td><td>${course.coursename}</td><td>${course.progression}</td></tr>`;
+//     });
+//     console.log("Här fortsätter mitt program3...");
     
-}
+// }
 
 function sortCourses() {
     if (filteredCourses !="") {
         const sorted1 = filteredCourses.sort((a, b) => a.code > b.code ? 1 : -1);
-        filteredToTable(sorted1);
+        dataToTable(sorted1);
     } else {
         const sorted1 = courses.sort((a, b) => a.code > b.code ? 1 : -1);
-        filteredToTable(sorted1);
+        dataToTable(sorted1);
     }
 }
 
 function sortCourses2() {
     if (filteredCourses !="") {
         const sorted2 = filteredCourses.sort((a, b) => a.coursename > b.coursename ? 1 : -1);
-        filteredToTable(sorted2);
+        dataToTable(sorted2);
     } else {
         const sorted2 = courses.sort((a, b) => a.coursename > b.coursename ? 1 : -1);
-        filteredToTable(sorted2);
+        dataToTable(sorted2);
     }
 }
 
 function sortCourses3() {
     if (filteredCourses !="") {
         const sorted3 = filteredCourses.sort((a, b) => a.progression > b.progression ? 1 : -1);
-        filteredToTable(sorted3);
+        dataToTable(sorted3);
     } else {
         const sorted3 = courses.sort((a, b) => a.progression > b.progression ? 1 : -1);
-        filteredToTable(sorted3);
+        dataToTable(sorted3);
     }
 }
