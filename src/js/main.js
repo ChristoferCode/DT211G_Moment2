@@ -8,12 +8,15 @@ let sort3El = document.querySelector("#sort3");
 
 let courses = [];
 let filteredCourses = [];
+let checked1 = "no";
+let checked2 = "no";
+let checked3 = "no";
 
 
 window.onload = () => {
     getCourses();
     document.querySelector("#search").addEventListener("input", filterCourses);
-    document.querySelector("#sort1").addEventListener("click", sortCourses);
+    document.querySelector("#sort1").addEventListener("click", sortCourses1);
     document.querySelector("#sort2").addEventListener("click", sortCourses2);
     document.querySelector("#sort3").addEventListener("click", sortCourses3);
 }
@@ -65,35 +68,69 @@ function filterCourses() {
 }
 
 
-function sortCourses() {
-    if (filteredCourses !="") {
+function sortCourses1() {
+    if (filteredCourses !="" && checked1 === "no") {
         const sorted1 = filteredCourses.sort((a, b) => a.code > b.code ? 1 : -1);
         dataToTable(sorted1);
-    } else {
+        checked1 = "yes";
+    } else if (filteredCourses =="" && checked1 === "no") {
         const sorted1 = courses.sort((a, b) => a.code > b.code ? 1 : -1);
         dataToTable(sorted1);
+        checked1 = "yes";
+
+    } else if (filteredCourses !="" && checked1 === "yes") {
+        const sorted1 = filteredCourses.sort((a, b) => b.code > a.code ? 1 : -1);
+        dataToTable(sorted1);
+        checked1 = "no";
+    } else if (filteredCourses =="" && checked1 === "yes") {
+        const sorted1 = courses.sort((a, b) => b.code > a.code ? 1 : -1);
+        dataToTable(sorted1);
+        checked1 = "no";
     }
 }
 
 
 function sortCourses2() {
-    if (filteredCourses !="") {
+    if (filteredCourses !="" && checked2 === "no") {
         const sorted2 = filteredCourses.sort((a, b) => a.coursename > b.coursename ? 1 : -1);
         dataToTable(sorted2);
-    } else {
+        checked2 = "yes";
+
+    } else if (filteredCourses =="" && checked2 === "no") {
         const sorted2 = courses.sort((a, b) => a.coursename > b.coursename ? 1 : -1);
         dataToTable(sorted2);
+        checked2 = "yes";
+
+    } else if (filteredCourses !="" && checked2 === "yes") {
+        const sorted2 = filteredCourses.sort((a, b) => b.coursename > a.coursename ? 1 : -1);
+        dataToTable(sorted2);
+        checked2 = "no";
+    } else if (filteredCourses =="" && checked2 === "yes") {  
+        const sorted2 = courses.sort((a, b) => b.coursename > a.coursename ? 1 : -1);
+        dataToTable(sorted2);
+        checked2 = "no";
     }
 }
 
 
 function sortCourses3() {
-    if (filteredCourses !="") {
+    if (filteredCourses !="" && checked3 === "no") {
         const sorted3 = filteredCourses.sort((a, b) => a.progression > b.progression ? 1 : -1);
         dataToTable(sorted3);
-    } else {
+        checked3 = "yes";
+    } else if (filteredCourses =="" && checked3 === "no") {
         const sorted3 = courses.sort((a, b) => a.progression > b.progression ? 1 : -1);
         dataToTable(sorted3);
+        checked3 = "yes";
+
+    } else if (filteredCourses !="" && checked3 === "yes") {
+        const sorted3 = filteredCourses.sort((a, b) => b.progression > a.progression ? 1 : -1);
+        dataToTable(sorted3);
+        checked3 = "no";
+    } else if (filteredCourses =="" && checked3 === "yes") {  
+        const sorted3 = courses.sort((a, b) => b.progression > a.progression ? 1 : -1);
+        dataToTable(sorted3);
+        checked3 = "no";
     }
 }
 
