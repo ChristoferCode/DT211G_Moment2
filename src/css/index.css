@@ -521,6 +521,35 @@ p {
     background-color: rgb(64, 255, 191);
 }  
 
+table {
+    border: 2px solid red;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    width: 500px;
+    border-collapse: collapse;
+}
+
+thead {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    text-align: left;
+    padding: 10px;
+    background-color: rgb(64, 255, 191);
+
+}
+
+th {
+    border-bottom: 2px solid black;
+    padding: 10px;
+
+}
+
+tr:hover {
+    background-color: rgb(64, 255, 191);
+}
+
+
 @media only screen and (min-width: 1570px) {
     .bigheadline {
         font-family: Arial, Helvetica, sans-serif;
