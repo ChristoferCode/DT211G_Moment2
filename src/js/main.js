@@ -5,8 +5,10 @@ let sort1El = document.querySelector("#sort1");
 let sort2El = document.querySelector("#sort2");
 let sort3El = document.querySelector("#sort3");
 
+
 let courses = [];
 let filteredCourses = [];
+
 
 window.onload = () => {
     getCourses();
@@ -14,7 +16,6 @@ window.onload = () => {
     document.querySelector("#sort1").addEventListener("click", sortCourses);
     document.querySelector("#sort2").addEventListener("click", sortCourses2);
     document.querySelector("#sort3").addEventListener("click", sortCourses3);
-
 }
 
 
@@ -40,11 +41,11 @@ function dataToTable(data) {
 tbodyEl.innerHTML = "";
 
     data.forEach(course => {
-        tbodyEl.innerHTML += `<tr><td>${course.code}</td><td>${course.coursename}</td><td>${course.progression}</td></tr>`;
+        tbodyEl.innerHTML += `<tr><td id="td1">${course.code}</td><td id="td2">${course.coursename}</td><td id="td3">${course.progression}</td><td id="td4"><a href="${course.syllabus}"> <i class="fa-solid fa-up-right-from-square"></i></a></td></tr>`;
     });
     console.log("Här fortsätter mitt program...");
-
 }
+
 
 function filterCourses() {
 
@@ -63,15 +64,6 @@ function filterCourses() {
     dataToTable(filteredCourses);
 }
 
-// function filteredToTable(data) {
-//     tbodyEl.innerHTML = "";
-
-//     data.forEach(course => {
-//         tbodyEl.innerHTML += `<tr><td>${course.code}</td><td>${course.coursename}</td><td>${course.progression}</td></tr>`;
-//     });
-//     console.log("Här fortsätter mitt program3...");
-    
-// }
 
 function sortCourses() {
     if (filteredCourses !="") {
@@ -83,6 +75,7 @@ function sortCourses() {
     }
 }
 
+
 function sortCourses2() {
     if (filteredCourses !="") {
         const sorted2 = filteredCourses.sort((a, b) => a.coursename > b.coursename ? 1 : -1);
@@ -93,6 +86,7 @@ function sortCourses2() {
     }
 }
 
+
 function sortCourses3() {
     if (filteredCourses !="") {
         const sorted3 = filteredCourses.sort((a, b) => a.progression > b.progression ? 1 : -1);
@@ -102,3 +96,14 @@ function sortCourses3() {
         dataToTable(sorted3);
     }
 }
+
+
+// function filteredToTable(data) {
+//     tbodyEl.innerHTML = "";
+
+//     data.forEach(course => {
+//         tbodyEl.innerHTML += `<tr><td>${course.code}</td><td>${course.coursename}</td><td>${course.progression}</td></tr>`;
+//     });
+//     console.log("Här fortsätter mitt program3...");
+    
+// }
