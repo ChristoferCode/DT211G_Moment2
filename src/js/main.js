@@ -6,8 +6,7 @@ let sort2El = document.querySelector("#sort2");
 let sort3El = document.querySelector("#sort3");
 
 let courses = [];
-
-
+let filteredCourses = [];
 
 window.onload = () => {
     getCourses();
@@ -53,29 +52,53 @@ function filterCourses() {
     console.log(courses);
 
     const searchInput = document.querySelector("#search").value.toLowerCase();
-    const filteredCourses = courses.filter((course) => 
+    filteredCourses = courses.filter((course) => 
         course.code.toLowerCase().includes(searchInput) ||
         course.coursename.toLowerCase().includes(searchInput)
     );
     console.log(filteredCourses);
-    dataToTable(filteredCourses);
 
+    tbodyEl.innerHTML = "";
+
+    filteredToTable(filteredCourses);
+}
+
+function filteredToTable(data) {
+    tbodyEl.innerHTML = "";
+
+    data.forEach(course => {
+        tbodyEl.innerHTML += `<tr><td>${course.code}</td><td>${course.coursename}</td><td>${course.progression}</td></tr>`;
+    });
+    console.log("Här fortsätter mitt program3...");
+    
 }
 
 function sortCourses() {
-    const sorted1 = courses.sort((a, b) => a.code > b.code ? 1 : -1);
-    console.table(courses);
-    dataToTable(sorted1);
+    if (filteredCourses !="") {
+        const sorted1 = filteredCourses.sort((a, b) => a.code > b.code ? 1 : -1);
+        filteredToTable(sorted1);
+    } else {
+        const sorted1 = courses.sort((a, b) => a.code > b.code ? 1 : -1);
+        filteredToTable(sorted1);
+    }
 }
 
 function sortCourses2() {
-    const sorted2 = courses.sort((a, b) => a.coursename > b.coursename ? 1 : -1);
-    console.table(courses);
-    dataToTable(sorted2);
+    if (filteredCourses !="") {
+        const sorted2 = filteredCourses.sort((a, b) => a.coursename > b.coursename ? 1 : -1);
+        filteredToTable(sorted2);
+    } else {
+        const sorted2 = courses.sort((a, b) => a.coursename > b.coursename ? 1 : -1);
+        filteredToTable(sorted2);
+    }
 }
 
 function sortCourses3() {
-    const sorted3 = courses.sort((a, b) => a.progression > b.progression ? 1 : -1);
-    console.table(courses);
-    dataToTable(sorted3);
+    if (filteredCourses !="") {
+        const sorted3 = filteredCourses.sort((a, b) => a.progression > b.progression ? 1 : -1);
+        filteredToTable(sorted3);
+    } else {
+        const sorted3 = courses.sort((a, b) => a.progression > b.progression ? 1 : -1);
+        filteredToTable(sorted3);
+    }
 }
