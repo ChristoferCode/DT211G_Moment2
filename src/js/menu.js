@@ -117,7 +117,6 @@ function hoverOpen() {
     } else {
         openMenuEl.style.boxShadow ="0px 2px 8px red";
     }   
-
 }
 
 function hoverClose() {
