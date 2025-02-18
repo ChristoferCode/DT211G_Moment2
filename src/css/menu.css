@@ -1,0 +1,602 @@
+#menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style-type: none;   
+}
+
+nav {
+
+}
+
+#open-menu {
+    background-color: rgb(0, 0, 0);
+    padding: 5px 10px 10px 10px;
+    margin: 0;
+    border: 2px solid rgb(164, 255, 225);
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+    justify-content: space-between;
+    width: 100px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* #close-menu:hover {
+    box-shadow: rgb(255, 17, 17) 0px 2px 8px;  
+} */
+
+.menutextopen {
+    color: rgb(164, 255, 225);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+}
+
+.bar1 {
+    background-color: rgb(164, 255, 225);
+    width: 25px;
+    height: 3px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.bar2 {
+    background-color: rgb(164, 255, 225);
+    width: 25px;
+    height: 3px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.bar3 {
+    background-color: rgb(164, 255, 225);
+    width: 25px;
+    height: 3px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#close-menu {
+    background-color: rgb(0, 0, 0);
+    padding: 5px 10px 10px 10px;
+    margin: 0;
+    border: 2px solid red;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+    justify-content: space-between;
+    width: 100px;
+    height: 45px;
+}
+
+/* #open-menu:hover {
+    box-shadow: rgb(255, 255, 255) 0px 2px 8px;  
+} */
+
+.menutextclose {
+    color: red;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+}
+
+.bar1close {
+    height: 3px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(250%) rotate(45deg);
+    width: 35px;
+    background-color: red;
+    display: block;
+}
+
+.bar2close {
+    height: 3px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateX(-200%) scaleY(10);
+    opacity: 0%;
+    background-color: red;
+    display: block;
+}
+
+.bar3close {
+    height: 3px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(-250%) rotate(-45deg);
+    width: 35px;
+    background-color: red;
+    display: block;
+}
+
+
+#close-menu-icon .bar1 {
+    transform: translateY(250%) rotate(45deg);
+    transition: 0.5s ;
+    width: 35px;
+    background-color: red;
+}
+
+#close-menu-icon .bar2 {
+transform: translateX(-200%) scaleY(10);
+    transition: 0.5s;
+    opacity: 0%;
+    background-color: red;
+}
+
+#close-menu-icon .bar3 {
+    transform: translateY(-250%) rotate(-45deg);
+    transition: 0.5s;
+    width: 35px;
+    background-color: red;
+}
+
+
+
+.link {
+    text-decoration: none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: left;
+    color: rgb(64, 255, 191);
+    text-wrap: nowrap;
+
+}
+
+.linkbutton {
+    background-color: black;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(64, 255, 191);
+}
+
+.linkbuttonactive {
+    background-color: rgb(187, 255, 136);
+    padding: 5px 20px;
+    border-radius: 10px;
+    color: rgb(0, 91, 61);
+    text-shadow: rgb(255, 255, 255) 0px 2px 8px;
+    border: 2px solid rgb(64, 255, 191);
+}
+
+.linkbutton:hover, .linkbutton:focus {
+    background-color: rgb(164, 255, 225);
+    box-shadow: rgb(255, 255, 255) 0px 2px 8px;
+    transform: translateY(-3px);
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(0, 91, 61);
+    text-shadow: rgb(255, 255, 255) 0px 2px 8px;
+    
+}
+
+.linkbuttonactive:hover, .linkbuttonactive:focus {
+    background-color: rgb(164, 255, 225);
+    box-shadow: rgb(255, 255, 255) 0px 2px 8px;
+    transform: translateY(-3px);
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(0, 91, 61);
+    text-shadow: rgb(255, 255, 255) 0px 2px 8px;
+}
+
+.linkbutton:focus {
+    background-color: rgb(164, 255, 225);
+    box-shadow: rgb(255, 255, 255) 0px 2px 8px;
+    transform: translateY(-2px);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    #open-menu {
+        background-color: rgb(0, 0, 0);
+        padding: 5px 10px 10px 10px;
+        margin: 0;
+        border: 2px solid rgb(64, 255, 191);
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+        height: 45px;
+        margin-left: auto;
+        margin-right: 20px;
+        margin-top: -10px;
+        margin-bottom: 10px;
+        animation-name: hamburgerborder;
+        animation-duration: 1s;
+        animation-fill-mode:both;
+        animation-play-state: paused;
+        animation-direction: normal;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style-type: none;
+        margin-left: -20px;
+        margin-right: 20px;
+        padding-top: 10px;
+        animation: showmenu;
+        animation-play-state: paused;
+        animation-duration: 1s;
+        transition: all ease-in-out;
+    }
+
+    #close-menu {
+        background-color: rgb(0, 0, 0);
+        padding: 5px 10px 10px 10px;
+        margin: 0;
+        border: 2px solid red;
+        border-radius: 10px;
+        cursor: pointer;
+        display: none;
+        justify-content: space-between;
+        width: 100px;
+        height: 45px;
+        margin-left: auto;
+        margin-right: 20px;
+        margin-top: -10px;
+        margin-bottom: 10px;
+        animation-name: hamburgerborderclose;
+        animation-duration: 1s;
+        animation-fill-mode:both;
+        animation-play-state: paused;
+        animation-direction: normal;
+    }
+
+    .menutextopen {
+        color: rgb(64, 255, 191);
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: block;
+        animation-name: hamburgertext;
+        animation-duration: 1s;
+        animation-fill-mode:both;
+        animation-play-state: paused;
+        animation-direction: normal;
+    }
+
+    .menutextclose {
+        color: red;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        animation-name: hamburgertextclose;
+        animation-duration: 1s;
+        animation-fill-mode:both;
+        animation-play-state: paused;
+        animation-direction: normal;
+    }
+
+    @keyframes showmenu {
+        from {
+            transform: translateY(400px);
+        }
+    
+        to {
+            transform: translateY(0px);
+        }
+     }
+
+     @keyframes hidemenu {
+        0% {
+            transform: translateY(0px);
+        }
+    
+        100% {
+            transform: translateY(400px);
+        }
+     }
+
+    @keyframes hamburgerborder {
+        from {
+            border: 2px solid rgb(64, 255, 191);
+        }
+
+        to {
+            border: 2px solid red;
+        }
+    }
+
+    @keyframes hamburgerborderhover {
+        from {
+            box-shadow: rgb(255, 255, 255) 0px 2px 8px;  
+        }
+
+        to {
+            box-shadow: red 0px 2px 8px;  
+        }
+    }
+
+
+    @keyframes hamburgerborderclose {
+        from {
+            border: 2px solid red;
+        }
+
+        to {
+            border: 2px solid rgb(64, 255, 191);
+        }
+    }
+
+
+    @keyframes hamburgerborderclosehover {
+        from {
+            box-shadow: red 0px 2px 8px;  
+        }
+
+        to {
+            box-shadow: rgb(255, 255, 255) 0px 2px 8px;  
+        }
+    }
+
+
+    @keyframes hamburgertext {
+        from {
+            color: rgb(64, 255, 191);
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    @keyframes hamburgertextclose {
+        from {
+            color: red;
+        }
+
+        to {
+            color: rgb(64, 255, 191);
+        }
+    }
+
+    .bar1 {
+        animation-name: hamburgerbar1;
+        animation-duration: 1s;
+        animation-fill-mode:both;
+        animation-play-state: paused;
+        animation-direction: normal;
+    }
+
+    .bar2 {
+        animation-name: hamburgerbar2;
+        animation-duration: 1s;
+        animation-fill-mode:both;
+        animation-play-state: paused;
+        animation-direction: normal;
+    }
+
+    .bar3 {
+        animation-name: hamburgerbar3;
+        animation-duration: 1s;
+        animation-fill-mode:both;
+        animation-play-state: paused;
+        animation-direction: normal;
+    }
+
+    .bar1close {
+        animation-name: hamburgerbar1close;
+        animation-duration: 1s;
+        animation-fill-mode:both;
+        animation-play-state: paused;
+        animation-direction: normal;
+    }
+
+    .bar2close {
+        animation-name: hamburgerbar2close;
+        animation-duration: 1s;
+        animation-fill-mode:both;
+        animation-play-state: paused;
+        animation-direction: normal;
+    }
+
+    .bar3close {
+        animation-name: hamburgerbar3close;
+        animation-duration: 1s;
+        animation-fill-mode:both;
+        animation-play-state: paused;
+        animation-direction: normal;
+    }
+
+    @keyframes hamburgerbar1 {
+        from {
+            background-color: rgb(64, 255, 191);
+            width: 25px;
+            height: 3px;
+            padding: 0px;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        to {
+            transform: translateY(250%) rotate(45deg);
+            width: 35px;
+            background-color: red;
+        }
+    }
+
+    @keyframes hamburgerbar2 {
+        from {
+            background-color: rgb(64, 255, 191);
+            width: 25px;
+            height: 3px;
+            padding: 0px;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        to {
+            transform: translateX(-200%) scaleY(10);
+            opacity: 0%;
+            background-color: red;
+        }
+    }
+
+    @keyframes hamburgerbar3 {
+        from {
+            background-color: rgb(64, 255, 191);
+            width: 25px;
+            height: 3px;
+            padding: 0px;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        to {
+            transform: translateY(-250%) rotate(-45deg);
+            width: 35px;
+            background-color: red;
+        }
+    }
+
+    @keyframes hamburgerbar1close {
+        from {
+            transform: translateY(250%) rotate(45deg);
+            width: 35px;
+            background-color: red;
+            height: 3px;
+            padding: 0px;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        to {
+            background-color: rgb(64, 255, 191);
+            width: 25px;
+            height: 3px;
+            padding: 0px;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            transform: translateY(0%) rotate(0deg);
+        }
+    }
+
+    @keyframes hamburgerbar2close {
+        from {
+            transform: translateX(-200%) scaleY(10);
+            opacity: 0%;
+            background-color: red;
+            height: 3px;
+            padding: 0px;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        to {
+            background-color: rgb(64, 255, 191);
+            width: 25px;
+            height: 3px;
+            padding: 0px;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            transform: translateX(0%) scaleY(1);
+            opacity: 100%;
+        }
+    }
+
+    @keyframes hamburgerbar3close {
+        from {
+            transform: translateY(-250%) rotate(-45deg);
+            width: 35px;
+            background-color: red;
+            height: 3px;
+            padding: 0px;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        to {
+            background-color: rgb(64, 255, 191);
+            width: 25px;
+            height: 3px;
+            padding: 0px;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            transform: translateY(0%) rotate(0deg);
+        }
+    }
+    
+}
