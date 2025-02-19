@@ -196,3 +196,12 @@ tfoot {
         color: rgb(64, 255, 191);
     }
 }
+
+@media only screen and (max-width: 470px) {
+
+    table {
+        margin-left: -40px;
+        margin-right: auto;
+    }
+
+}
